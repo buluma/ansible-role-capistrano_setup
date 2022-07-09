@@ -1,0 +1,69 @@
+---
+
+- name: create project directory
+  ansible.builtin.file:
+    path: '{{ item.home }}/{{ item.project_directory }}'
+    state: directory
+    owner: '{{ item.username }}'
+    group: '{{ item.username }}'
+    mode: 0755
+  with_items: '{{ capistrano_setup_users }}'
+
+- name: create capistrano releases directory
+  ansible.builtin.file:
+    path: '{{ item.home }}/{{ item.project_directory }}/releases'
+    state: directory
+    owner: '{{ item.username }}'
+    group: '{{ item.username }}'
+    mode: 0755
+  with_items: '{{ capistrano_setup_users }}'
+
+- name: create capistrano shared directory
+  ansible.builtin.file:
+    path: '{{ item.home }}/{{ item.project_directory }}/shared'
+    state: directory
+    owner: '{{ item.username }}'
+    group: '{{ item.username }}'
+    mode: 0755
+  with_items: '{{ capistrano_setup_users }}'
+
+- name: generate timestamp for initial release
+  ansible.builtin.command: date +'%Y%m%d%H%M%S'
+  register: release_time
+  changed_when: False
+
+- name: check which projects are active
+  ansible.builtin.stat:
+    path: '{{ item.home }}/{{ item.project_directory }}/current'
+  with_items: '{{ capistrano_setup_users }}'
+  register: active_projects
+
+- name: create initial release
+  ansible.builtin.file:
+    path: '{{ item.1.home }}/{{ item.1.project_directory }}/releases/{{ release_time.stdout }}'
+    state: directory
+    owner: '{{ item.1.username }}'
+    group: '{{ item.1.username }}'
+    mode: 0755
+  with_indexed_items: '{{ capistrano_setup_users }}'
+  when: active_projects.results[item.0].stat.exists is undefined
+
+- name: set current symlink to initial release
+  ansible.builtin.file:
+    src: '{{ item.1.home }}/{{ item.1.project_directory }}/releases/{{ release_time.stdout }}'
+    dest: '{{ item.1.home }}/{{ item.1.project_directory }}/current'
+    state: link
+    owner: '{{ item.1.username }}'
+    group: '{{ item.1.username }}'
+  with_indexed_items: '{{ capistrano_setup_users }}'
+  when: active_projects.results[ item.0 ].stat.exists is undefined
+
+# - name: upload placeholder page
+#   ansible.builtin.copy:
+#     src: '{{ item.1.placeholder }}'
+#     dest: '{{ item.1.home }}/{{ item.1.project_directory }}/releases/{{release_time.stdout}}/{{ item.1.placeholder }}'
+#     owner: '{{ item.1.username }}'
+#     group: '{{ item.1.username }}'
+#     mode:
+#   with_indexed_items: '{{ capistrano_setup_users }}'
+#   when: active_projects.results[{{item.0}}].stat.exists == false and item.1.placeholder is defined

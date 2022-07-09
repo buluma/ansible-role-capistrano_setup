@@ -1,0 +1,25 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-capistrano_setup
+      capistrano_setup_users:
+        - name: capistrano project
+          username: capistrano
+          group: docker
+          shell: ''
+          comment: ''
+          uid: 1750
+          home: /
+          createhomedir: false
+          password: "{{ 'itsasecret' | password_hash('sha512') }}"
+          update_password: on_create
+          upload_key: false
+          project_directory: "capistrano"
+          placeholder: files/index.txt
+      capistrano_setup_users_deleted:
+        - name: buluma
+          remove: false
