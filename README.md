@@ -4,7 +4,7 @@ An ansible role for creating the default project structure when using Capistrano
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-capistrano_setup/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-capistrano_setup/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-capistrano_setup/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-capistrano_setup)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/capistrano_setup)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/capistrano_setup)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-capistrano_setup/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-capistrano_setup/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-capistrano_setup/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-capistrano_setup)|[![quality](https://img.shields.io/ansible/quality/59668)](https://galaxy.ansible.com/buluma/capistrano_setup)|[![downloads](https://img.shields.io/ansible/role/d/59668)](https://galaxy.ansible.com/buluma/capistrano_setup)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -35,6 +35,18 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
       capistrano_setup_users_deleted:
         - name: buluma
           remove: false
+```
+
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+- name: prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
 ```
 
 
@@ -71,6 +83,13 @@ capistrano_setup_users_deleted:
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-capistrano_setup/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
