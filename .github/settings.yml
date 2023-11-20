@@ -5,4 +5,4 @@
 repository:
   description: An ansible role for creating the default project structure when using Capistrano as your application deployment tool.
   homepage: https://buluma.github.io/
-  topics: capistrano, setup, ansible, molecule, tox, playbook, hacktoberfest
+  topics: capistrano, setup, ansible, molecule, tox, playbook
