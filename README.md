@@ -1,10 +1,10 @@
-# [Ansible role capistrano_setup](#capistrano_setup)
+# Ansible role [capistrano_setup](https://galaxy.ansible.com/ui/standalone/roles/buluma/capistrano_setup/documentation)
 
 An ansible role for creating the default project structure when using Capistrano as your application deployment tool.
 
-|GitHub|Version|Issues|Pull Requests|
-|------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-capistrano_setup/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-capistrano_setup/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-capistrano_setup/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-capistrano_setup/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-capistrano_setup.svg)](https://github.com/buluma/ansible-role-capistrano_setup/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/capistrano_setup)](https://galaxy.ansible.com/ui/standalone/roles/buluma/capistrano_setup/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
