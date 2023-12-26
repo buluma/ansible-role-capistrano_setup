@@ -3,13 +3,13 @@
 # Install passlib if required
 
 - name: Import Users
-  include_tasks: users.yml
+  ansible.builtin.include_tasks: users.yml
   tags: users
 
 - name: Import structure
-  include_tasks: structure.yml
+  ansible.builtin.include_tasks: structure.yml
   tags: structure.yml
 
 - name: Import delete
-  include_tasks: delete.yml
+  ansible.builtin.include_tasks: delete.yml
   tags: delete.yml
