@@ -2,11 +2,14 @@
 # tasks file for capistrano_setup
 # Install passlib if required
 
-- include_tasks: users.yml
+- name: Import Users
+  include_tasks: users.yml
   tags: users
 
-- include_tasks: structure.yml
+- name: Import structure
+  include_tasks: structure.yml
   tags: structure.yml
 
-- include_tasks: delete.yml
+- name: Import delete
+  include_tasks: delete.yml
   tags: delete.yml

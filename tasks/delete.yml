@@ -1,5 +1,5 @@
 ---
-- name: remove users
+- name: delete | Remove users
   ansible.builtin.user:
     name: '{{ item.name }}'
     remove: '{{ item.remove }}'
