@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-capistrano_setup/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-capistrano_setup/compare/0.1.0...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#7](https://github.com/buluma/ansible-role-capistrano_setup/issues/7)
+
 ## [0.1.0](https://github.com/buluma/ansible-role-capistrano_setup/tree/0.1.0) (2022-07-09)
 
 [Full Changelog](https://github.com/buluma/ansible-role-capistrano_setup/compare/6cf01830f1ed855c505bdd55b50433c8e8f0c709...0.1.0)
