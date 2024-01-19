@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-capistrano_setup/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-capistrano_setup/compare/0.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/molecule-action from 6.0.0 to 6.0.1 [\#10](https://github.com/buluma/ansible-role-capistrano_setup/pull/10) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.2.0](https://github.com/buluma/ansible-role-capistrano_setup/tree/0.2.0) (2024-01-03)
 
 [Full Changelog](https://github.com/buluma/ansible-role-capistrano_setup/compare/0.1.2...0.2.0)
