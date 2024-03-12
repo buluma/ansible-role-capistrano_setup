@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5 to 6 [\#13](https://github.com/buluma/ansible-role-capistrano_setup/pull/13) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#12](https://github.com/buluma/ansible-role-capistrano_setup/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [0.3.0](https://github.com/buluma/ansible-role-capistrano_setup/tree/0.3.0) (2024-01-20)
