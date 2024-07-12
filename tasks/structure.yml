@@ -30,7 +30,7 @@
 - name: structure | Generate timestamp for initial release
   ansible.builtin.command: date +'%Y%m%d%H%M%S'
   register: release_time
-  changed_when: False
+  changed_when: false
 
 - name: structure | Check which projects are active
   ansible.builtin.stat:
