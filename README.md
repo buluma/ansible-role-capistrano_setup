@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: yes
 
   roles:
-    - role: ansible-role-capistrano_setup
+    - role: buluma.capistrano_setup
       capistrano_setup_users:
         - name: capistrano project
           username: capistrano
