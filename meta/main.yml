@@ -1,13 +1,11 @@
 ---
 galaxy_info:
   author: buluma
-  namespace: buluma
   role_name: capistrano_setup
-  description: An ansible role for creating the default project structure when using Capistrano as your application deployment tool.
-  company: ShadowNet
+  description: 'An ansible role for creating the default project structure when using Capistrano as your application deployment tool.'
   license: Apache-2.0
-
-  min_ansible_version: "2.12"
+  company: ShadowNet
+  min_ansible_version: '2.12
   platforms:
     - name: Fedora
       versions:
@@ -21,9 +19,7 @@ galaxy_info:
     - name: EL
       versions:
         - all
-
   galaxy_tags:
     - capistrano
     - setup
-
 dependencies: []
