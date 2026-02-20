@@ -10,8 +10,8 @@
         - name: capistrano project
           username: capistrano
           group: docker
-          shell: ''
-          comment: ''
+          shell: ""
+          comment: ""
           uid: 1750
           home: /
           createhomedir: false
