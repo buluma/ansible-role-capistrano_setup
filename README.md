@@ -23,8 +23,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
         - name: capistrano project
           username: capistrano
           group: docker
-          shell: ''
-          comment: ''
+          shell: ""
+          comment: ""
           uid: 1750
           home: /
           createhomedir: false

@@ -5,7 +5,7 @@
     state: directory
     owner: "{{ item.username }}"
     group: "{{ item.username }}"
-    mode: 0755
+    mode: "0755"
   with_items: "{{ capistrano_setup_users }}"
 
 - name: structure | Create capistrano releases directory
@@ -14,7 +14,7 @@
     state: directory
     owner: "{{ item.username }}"
     group: "{{ item.username }}"
-    mode: 0755
+    mode: "0755"
   with_items: "{{ capistrano_setup_users }}"
 
 - name: structure | Create capistrano shared directory
@@ -23,7 +23,7 @@
     state: directory
     owner: "{{ item.username }}"
     group: "{{ item.username }}"
-    mode: 0755
+    mode: "0755"
   with_items: "{{ capistrano_setup_users }}"
 
 - name: structure | Generate timestamp for initial release
@@ -43,7 +43,7 @@
     state: directory
     owner: "{{ item.1.username }}"
     group: "{{ item.1.username }}"
-    mode: 0755
+    mode: "0755"
   with_indexed_items: "{{ capistrano_setup_users }}"
   when: active_projects.results[item.0].stat.exists is undefined
 

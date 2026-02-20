@@ -6,7 +6,7 @@
   when: ansible_os_family == "Debian"
 
 - name: passlib | Install passlib on RedHat/CentOS
-  ansible.builtin.yum:
+  ansible.builtin.dnf:
     name: python3-passlib
     state: present
   when: ansible_os_family == "RedHat"
