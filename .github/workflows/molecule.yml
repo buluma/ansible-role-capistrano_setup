@@ -57,8 +57,6 @@ jobs:
           - image: "docker-molecule-images"
             tag: "opensuse"
           - image: "enterpriselinux"
-            tag: "8"
-          - image: "enterpriselinux"
             tag: "latest"
     steps:
       - name: checkout
