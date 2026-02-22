@@ -43,15 +43,7 @@ jobs:
           - image: "docker-molecule-images"
             tag: "fedora_latest"
           - image: "docker-molecule-images"
-            tag: "fedora42"
-          - image: "docker-molecule-images"
-            tag: "fedora43"
-          - image: "docker-molecule-images"
-            tag: "fedora44"
-          - image: "docker-molecule-images"
             tag: "fedora45"
-          - image: "docker-molecule-images"
-            tag: "plucky"
           - image: "docker-molecule-images"
             tag: "ubuntu_latest"
           - image: "docker-molecule-images"
@@ -60,8 +52,6 @@ jobs:
             tag: "opensuse-tumbleweed"
           - image: "enterpriselinux"
             tag: "latest"
-          - image: "enterpriselinux"
-            tag: "8"
     steps:
       - name: checkout
         uses: actions/checkout@v6
