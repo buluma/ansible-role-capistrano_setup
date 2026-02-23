@@ -11,6 +11,7 @@ An ansible role for creating the default project structure when using Capistrano
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-capistrano_setup/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
+---
   - name: Converge
     hosts: all
     become: yes
@@ -40,6 +41,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-capistrano_setup/blob/master/molecule/default/prepare.yml):
 
 ```yaml
+---
   - name: Prepare
     hosts: all
     become: yes
@@ -56,6 +58,7 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-capistrano_setup/blob/master/defaults/main.yml):
 
 ```yaml
+---
 # defaults file for capistrano_setup
 
 capistrano_setup_users:
