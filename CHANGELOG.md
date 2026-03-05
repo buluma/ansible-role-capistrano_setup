@@ -9,6 +9,11 @@
 - Update action [\#6](https://github.com/buluma/ansible-role-capistrano_setup/issues/6)
 - rebuild action [\#5](https://github.com/buluma/ansible-role-capistrano_setup/issues/5)
 
+**Merged pull requests:**
+
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#21](https://github.com/buluma/ansible-role-capistrano_setup/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#20](https://github.com/buluma/ansible-role-capistrano_setup/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-capistrano_setup/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-capistrano_setup/compare/0.3.0...24.3.31)
